@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+h2 {
+
+  font-family: 'Aboreto';
+  font-size: 50px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #040322;
+}
+p {
+  font-family: 'Hind';
+}
+.section {
+  transition: opacity 1s;
+}
+.section-hidden {
+  opacity: 0;
+}
+/* -------------NAVIGATION------------- */
+.header-nav {
+  width: 100%;
+  height: 100px;
+  background: #0b133ce1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo-star-point {
+  stroke: #03021c;
+  stroke-width: 1px;
+  fill: #476987;
+  z-index: 10;
+}
+.casseopia-logo {
+  position: relative;
+  z-index: 10;
+}
+.casseopia-logo svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.logo-text {
+  position: absolute;
+  top: 18px;
+  left: 47px;
+  color: #9db7ce;
+  font-size: 40px;
+  font-family: 'Aboreto';
+  z-index: 2;
+}
+.nav-links{
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #9db7ce;
+  font-family: 'Aboreto';
+  font-size: 20px;
+  top: 28;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* -------------HERO------------- */
+
+.hero-body {
+  width: 100%;
+  height: 800px;
+  background: #03021c;
+  background: linear-gradient(to bottom, #03021c 0%, #09103f 100%);
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.stars {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png)
+      repeat,
+    linear-gradient(to bottom, #03021c 0%, #09103f 100%);
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+#triangle-down {
+  position: absolute;
+  border-left: 49.2vw solid transparent;
+  border-right: 49.1vw solid transparent;
+  background-color: transparent;
+  border-top: 100px solid #09103f;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.star-point {
+  stroke: #03021c;
+  stroke-width: 1px;
+  fill: rgb(215, 214, 214);
+  z-index: 10;
+}
+.star-line {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2"
+
+}
+.hero-section svg {
+  position: absolute;
+}
+.hero-section svg path {
+ display: none;
+}
+.hero-h2 {
+  position: absolute;
+  color: white; 
+  font-family: 'Aboreto'; 
+  text-shadow: -2px 0 #03021c, 0 2px #03021c, 2px 0 #03021c, 0 -2px #03021c;
+  z-index: 1;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: 900;
+}
+.hero-section:hover h2{
+  color: #9db7ce;
+}
+
+.hero-section:hover{
+  cursor: pointer;
+}
+.hero-section:hover path{
+  display: block;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/* -------------H1-HERO------------- */
+
+.hero-h1 {
+  position: absolute;
+  top: 250px;
+  left: 100px
+}
+
+.hero-h1 h1 {
+  color: white;
+  font-family: 'Aboreto';
+  font-size: 80px;
+}
+.hero-h1 p {
+  color: #9db7ce;
+  font-size: 30px;
+  font-family: 'Hind';
+  padding-left: 7px;
+}
+
+/* -------------ABOUT-HERO------------- */
+
+.about-hero-section {
+  position: absolute;
+  top: 440px;
+  right: 45%; 
+}
+
+.about-hero-h2 {
+  top: 120px;
+  left: 10px; 
+}
+.about-hero-section:hover path{
+  animation: dash 1s linear forwards;
+}
+
+/* -------------PROJECTS-HERO------------- */
+.projects-hero-section {
+  position: absolute;
+  top: 520px;
+  left: 15%; 
+}
+
+.projects-hero-h2 {
+  top: 110px;
+  left: 30px; 
+}
+.projects-hero-section:hover path{
+  animation: dash .4s linear forwards;
+}
+
+/* -------------CONTACT-HERO------------- */
+.contact-hero-section {
+  position: absolute;
+  top: 200px;
+  right: 30%;  
+}
+.contact-hero-h2 {
+  position: absolute;
+  top: 95px;
+  left: 30px; 
+}
+.contact-hero-section:hover path{
+  animation: dash 1s linear forwards;
+}
+
+
+/* -------------ABOUT SECTION------------- */
+#about-section {
+  margin: 0px 150px;
+  /* background-color: rebeccapurple; */
+  padding: 200px 0px 100px 0px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 200px;
+  align-items: center;
+  justify-items: center;
+
+}
+.about-text {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.about-p {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-top: 80px;
+  padding: 60px;
+  background-color: #09103fbe;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+}
+.about-grid h2 {
+  position: absolute;
+  padding: 0px 10px;
+  color: #9db7ce;
+  text-shadow: -2px 0 #03021c, 0 2px #03021c, 2px 0 #03021c, 0 -2px #03021c;
+  z-index: 5;
+}
+.about-text svg {
+  position: absolute;
+  top: -110px;
+  left: 0px;
+  z-index: -10;
+}
+.about-grid .star-point {
+  stroke: #03021c;
+  stroke-width: 1px;
+  fill: #ffffffa2;
+  z-index: -10;
+}
+svg path {
+ display: block;
+}
+.about-img {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 30vw;
+  height: 30vw;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+/* Body Sections */
+.triangle-down-space {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: #040322;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* -------------PROJECTS SECTION------------- */
+
+
+.projects-p {
+  margin-top: 100px;
+  padding: 60px;
+  background-color: #09103fbe;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+#projects-section {
+  position: relative;
+  margin: 0px 150px;
+  /* background-color: rebeccapurple; */
+  padding: 200px 0px 200px 0px;
+  height: 100%;
+}
+#projects-section h2 {
+  color: #9db7ce;
+  text-shadow: -2px 0 #03021c, 0 2px #03021c, 2px 0 #03021c, 0 -2px #03021c;
+  z-index: 5;
+  text-align: center;
+}
+.projects-text svg {
+  position: absolute; 
+  top: 95px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  z-index: -1;
+  width: 320px; /* Need a specific value to work */
+}
+#projects-section .star-point {
+  stroke: #03021c;
+  stroke-width: 1px;
+  fill: #ffffffa2;
+  z-index: 10;
+}
+.projects-background-box {
+  margin-top: 40px;
+  padding: 40px;
+  background-color: #09103fbe;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+.projects-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.project {
+  width: 300px;
+  height: 275px;
+}
+.overlay-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.project-overlay {
+  position: absolute;
+  background-color: #040322;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.project-overlay p {
+  font-family: 'Aboreto';
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.project img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-box:hover .project-overlay {
+  background-color: #9db7ce;
+  color: #03021c;
+  font-weight: 900;
+}
+.overlay-box:hover {
+  cursor: pointer;
+}
+
+
+
+/* -------------LANGUAGES FLEX------------- */
+.projects-lang-flex {
+  padding: 50px 0px 50px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+  top: -100px;
+  scroll-margin-top: 7rem;
+}
+.projects-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lang-name {
+  color: #9db7ce;
+  text-align: center;
+}
+
+.language {
+  width: 85px;
+  height: 80px;
+}
+
+.grey-icon {
+  filter:  contrast(0%) brightness(1) sepia(100%) hue-rotate(180deg) ;
+  opacity: 100%;
+}
+.grey-icon:hover {
+  cursor: pointer;
+  filter:  contrast(0%) brightness(1.55) sepia(100%) hue-rotate(180deg) ;
+  opacity: 100%;
+}
+.projects-btn-active > .grey-icon{
+  filter:  contrast(0%) brightness(1.55) sepia(100%) hue-rotate(180deg) ;
+  opacity: 100%;
+}
+.projects-content {
+  display: none;
+}
+.projects-content-active {
+  display: flex;
+}
+
+.section-hidden {
+  opacity: 0;
+}
+.starchart {
+  position: absolute;
+  opacity: 80%;
+  width: 125%;
+  top: -315px;
+  left: -250px;
+}
+
+/* -------------CONTACT-SECTION------------- */
+#triangle-up {
+  position: absolute;
+  border-left: 49.2vw solid transparent;
+  border-right: 49.1vw solid transparent;
+  background-color: transparent;
+  border-bottom: 100px solid #09103f;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.triangle-up-space {
+  position: relative;
+  height: 100px;
+  background: #040322;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+#contact-section{
+    margin: 0px 150px;
+    /* background-color: rebeccapurple; */
+    padding: 150px 0px 100px 0px;
+    z-index: -10;
+}
+.contact-body {
+  height: 100%;
+  z-index: -10;
+}
+
+.contact-stars {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png)
+      repeat,
+    linear-gradient(to top, #03021c 0%, #09103f 100%);
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: -10;
+}
+
+#contact-title {
+  color: #9db7ce;
+  text-shadow: -2px 0 #03021c, 0 2px #03021c, 2px 0 #03021c, 0 -2px #03021c;
+  z-index: 5;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 200px;
+  align-items: center;
+  justify-items: center;
+
+}
+.contact-text {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.contact-form {
+  position: relative;
+  z-index: 4;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-top: 80px;
+  padding: 60px 60px 40px 60px;
+  background-color: #01020ebe;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+}
+.contact-form form {
+  margin: 20px 0px;
+}
+.contact-form label {
+  font-family: 'Hind';
+}
+#email {
+  padding: 15px 20px;
+  background-color: #09103f;
+  border: none;
+  color: white;
+  width: 90%;
+
+  margin: 10px 0px;
+}
+#email:focus{
+    outline: 2px solid #9db7ce;
+}
+#message:focus{
+  outline: 2px solid #9db7ce;
+}
+#message {
+  padding: 15px 20px;
+  background-color: #09103f;
+  border: none;
+  color: white;
+  width: 90%;
+  height: 200px;
+  resize: none;
+}
+#submit {
+  padding: 15px 35px;
+  margin: 20px 0px 0px 0px;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px #9db7ce;
+  font-family: 'Aboreto';
+  font-weight: 900;
+  color: #9db7ce;
+  font-size: 16px;
+}
+#submit:hover {
+  border: solid 2px white;
+  color: white;
+}
+.contact-grid h2 {
+  position: absolute;
+  padding: 0px 10px;
+  color: #9db7ce;
+  text-shadow: -2px 0 #03021c, 0 2px #03021c, 2px 0 #03021c, 0 -2px #03021c;
+  z-index: 1;
+}
+.contact-text svg {
+  position: absolute;
+  top: -80px;
+  left: 0px;
+  z-index: 0;
+}
+.contact-grid .star-point {
+  stroke: #03021c;
+  stroke-width: 1px;
+  fill: #ffffffa2;
+  z-index: 10;
+}
+svg path {
+ display: block;
+}
+.contact-img {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 30vw;
+  height: 30vw;
+}
+.contact-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+/* -------------MODAL------------- */
+
+
+html {
+  font-size: 62.5%;
+  /* box-sizing: border-box; */
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #9db7ce;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  align-self: start;
+  justify-self: start;
+  padding-top: 90px;
+}
+.modal-grid img {
+  width: 100%;
+  height: 100%;
+}
+.modal-grid a {
+  padding: 15px 35px;
+  margin: 20px 0px 10px 0px;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px #9db7ce;
+  font-family: 'Aboreto';
+  font-weight: 900;
+  color: #9db7ce;
+  font-size: 16px;
+  text-decoration: none;
+}
+.modal-grid a:hover {
+  border: solid 2px white;
+  color: white;
+}
+.modal-grid p {
+  padding: 0px 0px 50px 0px;
+}
+h3 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Aboreto';
+  text-align: left;
+  color: #9db7ce;
+}
+
+p {
+  font-size: 1.8rem;
+  text-align: left;
+  padding: 10px 0px;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  color: white;
+  background-color: #0b133ce8;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 8;
+  margin: 0px 0px;
+}
+.modal-active {
+  display: block;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #01020e9a;
+  backdrop-filter: blur(2px);
+  z-index: 7;
+}
+.modal-category {
+  color: #9db7ce;
+  font-family: 'Aboreto';
+  font-size: 22px;
+}
+
+.casseopia-modal {
+  position: relative;
+  z-index: 10;
+}
+.casseopia-modal svg{
+    position: absolute;
+    top: -30px;
+    left: -25px;
+    z-index: 1;
+}
+.modal-logo-text {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: #9db7ce;
+  font-size: 40px;
+  font-family: 'Aboreto';
+  z-index: 2;
+}
